@@ -1,6 +1,6 @@
-# Репозиторий демо-сайтов (demo.ser-slo.ru)
+# Репозиторий демо-сайтов
 
-GitHub Pages, домен demo.ser-slo.ru (файл CNAME — не трогать; также не трогать index.html, robots.txt, .nojekyll).
+GitHub Pages, адрес https://dreme6565-gif.github.io/Demo/ (свой домен demo.ser-slo.ru не подключился: GitHub не может проверить DNS reg.ru). Не трогать index.html, robots.txt, .nojekyll.
 
 ## Публикация нового демо
 - Папка с латинским слагом по названию бизнеса: `kat-i-dog/index.html`, картинки внутри папки.
@@ -10,7 +10,7 @@ GitHub Pages, домен demo.ser-slo.ru (файл CNAME — не трогать
   Без записи демо не попадёт в автоматическую чистку.
 - Публикуй пачкой (один коммит на несколько демо), не больше ~10 пушей в час.
 - Перед пушем `git fetch origin main` — история периодически переписывается чисткой, при расхождении делай rebase на origin/main.
-- Ссылка: `https://demo.ser-slo.ru/<slug>/`.
+- Ссылка: `https://dreme6565-gif.github.io/Demo/<slug>/`.
 
 ## «Оставить» и чистка
 - Когда пользователь пишет «оставить: …» — добавь слаги в `keep.txt` и запушь.
