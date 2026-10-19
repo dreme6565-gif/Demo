@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Новая Я демо</title>
+<meta name="description" content="Новая Я: Берёзовая ул., 27. Запись в WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Golos+Text:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#fff5f0;--ink:#1f2d33;--accent:#e8573d;--accent2:#35b6b0;--soft:#ffe0d4;--dark:#1f2d33;--fh:'Comfortaa',system-ui,sans-serif;--fb:'Golos Text',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.55 var(--fb);color:var(--ink);background:var(--bg);padding-bottom:76px;overflow-x:hidden}
+h1,h2,h3{font-family:var(--fh);line-height:1.12}
+a{color:inherit}
+.demo{background:var(--dark);color:#fff;text-align:center;font-size:13px;padding:7px 12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid #0001}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:var(--fh);font-weight:700;font-size:20px;text-decoration:none;color:var(--accent)}
+.btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:14px 26px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #0003}
+.btn.sm{padding:9px 18px;font-size:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.hero{position:relative;overflow:hidden;min-height:78vh;display:flex;align-items:center;background:linear-gradient(150deg,var(--soft) 0%,var(--bg) 55%,var(--accent2) 160%);isolation:isolate}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--dark) 78%,transparent),transparent 75%);z-index:-1}
+.hero.has-img{color:#fff}
+.hero .wrap{padding-top:56px;padding-bottom:56px}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:14px}
+.hero.has-img .eyebrow{color:var(--accent2)}
+.h1{font-size:clamp(32px,7.2vw,64px);max-width:15em}
+.lead{margin-top:16px;font-size:clamp(17px,2.4vw,21px);max-width:30em;opacity:.9}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chip{display:inline-flex;gap:8px;align-items:center;margin-top:22px;padding:8px 16px;border-radius:999px;background:#fff;color:var(--ink);box-shadow:0 4px 16px #0002;font-weight:700;font-size:15px}
+.chip svg{color:var(--accent2)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:-36px;position:relative;z-index:2}
+.fact{background:#fff;border-radius:20px;padding:20px;box-shadow:0 10px 30px #0001;display:flex;gap:14px;align-items:flex-start}
+.fact svg{color:var(--accent);flex:none;margin-top:2px}
+.fact b{display:block;font-size:19px;font-family:var(--fh)}
+.fact span{font-size:14px;opacity:.75}
+.sec{padding:72px 0}
+.sec h2{font-size:clamp(28px,5vw,42px);margin-bottom:12px}
+.sec .sub2{max-width:34em;opacity:.8;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:#fff;border-radius:22px;padding:26px;box-shadow:0 8px 26px #0001;display:flex;flex-direction:column;gap:8px;border-top:5px solid var(--accent2)}
+.card h3{font-size:22px}
+.card p{opacity:.75;flex:1}
+.price{font-family:var(--fh);font-size:22px;color:var(--accent)}
+.lnk{font-weight:700;color:var(--accent);text-decoration:none}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:800px){.split{grid-template-columns:1fr 1fr}}
+.ph{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(140deg,var(--soft),var(--accent2));display:grid;place-items:center}
+.ph.sq{aspect-ratio:1}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph small{padding:16px;text-align:center;color:var(--dark);opacity:.55;font-size:13px}
+.steps{display:grid;gap:14px;counter-reset:s;margin-top:20px}
+.steps li{list-style:none;display:flex;gap:14px;align-items:flex-start}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700}
+.alt{background:var(--soft)}
+.rev{display:grid;gap:24px;align-items:center;text-align:center;justify-items:center}
+.big{font-family:var(--fh);font-size:clamp(64px,16vw,120px);color:var(--accent);line-height:1}
+.contacts{display:grid;gap:24px}
+@media(min-width:800px){.contacts{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border-radius:22px;padding:26px;box-shadow:0 8px 26px #0001}
+.box p{margin:6px 0}
+.final{background:var(--dark);color:#fff;text-align:center;border-radius:32px;padding:56px 24px}
+.final h2{color:#fff}
+footer{text-align:center;font-size:13px;opacity:.65;padding:30px 20px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid #0001;display:flex;gap:10px}
+.sticky .btn{flex:1;padding:14px 10px}
+@media(min-width:900px){.sticky{display:none}body{padding-bottom:0}}
+
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.hero{background-image:radial-gradient(600px circle at var(--mx,70%) var(--my,30%),var(--accent2),transparent 60%)}.w{display:inline-block;opacity:0;transform:translateY(14px);animation:wi .7s forwards}@keyframes wi{to{opacity:1;transform:none}}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(var(--accent2) 2px,transparent 2.5px) 0 0/28px 28px;opacity:.45}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+.sticky{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--fh);font-size:clamp(88px,18vw,150px);line-height:1;color:var(--bg);opacity:.8}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rv{opacity:1;transform:none;transition:none;animation:rise .7s both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(max-width:560px){.h1{font-size:clamp(28px,9vw,40px)}.cta .btn{width:100%}}
+</style>
+
+<div class="demo">Демо-версия сайта. Не является официальным сайтом салона. Концепция «Новая версия».</div>
+<header class="top"><div class="wrap"><a class="logo" href="#top">Новая Я</a><a class="btn sm" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF.">Записаться</a></div></header>
+<main id="top">
+<section class="hero" id="hero">
+
+<div class="wrap">
+<span class="eyebrow">Казань · Салон красоты · Лесной городок, Приволжский район</span>
+<h1 class="h1">Новая Я: станьте обновлённой версией себя</h1>
+<p class="lead">Оценка 5.0 по 82 отзывам. Стрижки от 2 500 ₽, запись в WhatsApp.</p>
+<div class="cta"><a class="btn" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Записаться в WhatsApp</a><a class="btn ghost" href="#services">Услуги и цены</a></div>
+<div class="chip"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2.800l2.800 5.800 6.400.9-4.600 4.500 1.100 6.300L12 17.200 6.300 20.300l1.100-6.300L2.800 9.500l6.400-.9z"/></svg> 5.0 · 82 отзывов в 2ГИС</div>
+</div>
+</section>
+
+<div class="wrap">
+<div class="facts">
+<div class="fact rv"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2.800l2.800 5.800 6.400.9-4.600 4.500 1.100 6.300L12 17.200 6.300 20.300l1.100-6.300L2.800 9.500l6.400-.9z"/></svg><div><b>5.0 из 5</b><span>по 82 отзывам в 2ГИС</span></div></div>
+<div class="fact rv"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Ежедневно 09:00–21:00</b><span>график работы</span></div></div>
+<div class="fact rv"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.800C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.800" r="2.600"/></svg><div><b>Берёзовая ул., 27</b><span>Лесной городок, Приволжский район</span></div></div>
+</div>
+</div>
+<section class="sec" id="services"><div class="wrap">
+<h2 class="rv">Услуги и цены</h2>
+<p class="sub2 rv">Цены «от» из карточки салона. Остальное уточняется при записи.</p>
+<div class="cards"><article class="card rv"><h3>Женская стрижка</h3><p>Стрижка с укладкой</p><b class="price">от 2 500 ₽</b><a class="lnk" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%96%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0.">Записаться</a></article><article class="card rv"><h3>Мужская стрижка</h3><p>Чёткая форма</p><b class="price">по запросу</b><a class="lnk" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0.">Записаться</a></article><article class="card rv"><h3>Окрашивание</h3><p>Подбор оттенка с мастером</p><b class="price">по запросу</b><a class="lnk" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%9E%D0%BA%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.">Записаться</a></article><article class="card rv"><h3>Уход и укладки</h3><p>Вечерние и свадебные причёски</p><b class="price">по запросу</b><a class="lnk" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%A3%D1%85%D0%BE%D0%B4%20%D0%B8%20%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8.">Записаться</a></article></div>
+<div class="cta rv"><a class="btn" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Уточнить цену в WhatsApp</a></div>
+</div></section>
+<section class="sec alt"><div class="wrap split">
+<div class="ph rv"><span class="mono">Н</span><small>Фото салона появится в полной версии</small></div>
+<div class="rv">
+<h2>Как записаться</h2>
+<p class="sub2">Запись по предварительной договорённости. Это занимает меньше минуты.</p>
+<ol class="steps">
+<li><div><b>Напишите нам в WhatsApp</b><br>Одно нажатие на кнопку, и сообщение уже готово.</div></li>
+<li><div><b>Выберите услугу и время</b><br>Администратор подтвердит удобное окно.</div></li>
+<li><div><b>Приходите по адресу</b><br>Берёзовая ул., 27, Лесной городок, Приволжский район.</div></li>
+</ol>
+<div class="cta"><a class="btn" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Записаться</a></div>
+</div></div></section>
+
+<section class="sec"><div class="wrap split">
+<div class="rv"><h2>Что говорят гости</h2><p class="sub2">Мы не публикуем выдуманные отзывы. Настоящие отзывы гостей читайте в карточке салона на 2ГИС.</p><a class="btn ghost" href="https://2gis.ru/kazan/firm/70000001020632824">Читать отзывы в 2ГИС</a></div>
+<div class="rev rv"><div class="big">5.0</div><div>средняя оценка · 82 отзывов</div></div>
+</div></section>
+<section class="sec alt"><div class="wrap">
+<h2 class="rv">Атмосфера салона</h2>
+<p class="sub2 rv">Иллюстрации для демо. В полной версии здесь будут настоящие фото салона и работ мастеров.</p>
+<div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+<div class="ph sq rv"><span class="mono">Н</span><small>Фото работ — в полной версии</small></div>
+<div class="ph sq rv"><span class="mono">Н</span><small>Фото интерьера — в полной версии</small></div>
+</div></div></section>
+<section class="sec" id="contacts"><div class="wrap">
+<h2 class="rv">Адрес и контакты</h2>
+<div class="contacts">
+<div class="box rv"><p><b>Адрес:</b> Берёзовая ул., 27</p><p><b>Район:</b> Лесной городок, Приволжский район</p><p><b>Часы:</b> Ежедневно 09:00–21:00</p><p><b>Соцсети:</b> <a href="https://vk.com/club126676500">ВКонтакте</a> · <a href="https://t.me/+79179318949">Telegram</a></p><div class="cta"><a class="btn" href="https://2gis.ru/kazan/firm/70000001020632824"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.800C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.800" r="2.600"/></svg> Построить маршрут (2ГИС)</a></div></div>
+<div class="box rv"><p><b>Быстрая запись</b></p><p>Напишите в WhatsApp, и мы подберём удобное время.</p><div class="cta"><a class="btn" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Написать в WhatsApp</a></div></div>
+</div>
+</div></section>
+<section class="sec"><div class="wrap"><div class="final rv"><h2>Запишитесь сегодня</h2><p style="margin:12px 0 24px;opacity:.85">Один клик, и сообщение уже в WhatsApp.</p><a class="btn" style="background:var(--accent2);color:var(--dark)" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Записаться в WhatsApp</a></div></div></section>
+</main>
+<footer>Демо-версия сайта для Новая Я. Отзывы и актуальные цены смотрите в карточке салона на 2ГИС.</footer>
+<div class="sticky"><a class="btn" href="https://wa.me/79179318949?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%AF."><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.300.1-.2 0-.3 0-.5l-.8-1.900c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.700-1 1.600-.9 2.500.2 1.300.9 2.500 1.900 3.500 1.700 1.800 3.900 2.700 5.100 2.700.8 0 1.700-.5 2.100-1.200.1-.3.1-.6.1-.7-.1-.1-.3-.2-.5-.3z"/></svg> Записаться</a><a class="btn ghost" href="https://2gis.ru/kazan/firm/70000001020632824">Маршрут</a></div>
+<script>
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,QWA="https://wa.me/79179318949?text=";
+document.getElementById('hero').classList.toggle('has-img',!!document.querySelector('.hero-img'));
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var h=document.querySelector('.hero');h.addEventListener('pointermove',function(e){var r=h.getBoundingClientRect();h.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');h.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');});var t=document.querySelector('.h1');if(t&&!RM){var w=t.textContent.split(' ');t.innerHTML=w.map(function(x,i){return '<span class="w" style="animation-delay:'+(i*90)+'ms">'+x+'</span>'}).join(' ');}
+</script>
+
