@@ -98,5 +98,105 @@
   "slug": "s0309",
   "name": "03/09",
   "published": "2026-10-19"
+ },
+ {
+  "slug": "atlon-fm",
+  "name": "Атлон ФМ",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "mossib",
+  "name": "МосСиб",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "spektr-stroy",
+  "name": "Спектр Строй",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "loft-krd",
+  "name": "Loft",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "liniya-remonta",
+  "name": "Линия ремонта",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "pro-remont-irk",
+  "name": "Про ремонт",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "metio",
+  "name": "Метио",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "alfa-dekor",
+  "name": "Альфа-Декор",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "uyutny-dom",
+  "name": "Уютный дом",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "reco-design",
+  "name": "ReCo Design",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "realny-remont",
+  "name": "Реальный Ремонт",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "studiya-remonta-ufa",
+  "name": "Студия ремонта квартир",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "remont-tyumen",
+  "name": "Ремонт квартир и домов",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "gt-proekt",
+  "name": "Gt проект",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "azbuka-remonta",
+  "name": "Азбука ремонта+",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "proekt-n",
+  "name": "Проект-Н",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "lyuks-remont",
+  "name": "Люкс Ремонт",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "ruslan-kzn",
+  "name": "Руслан",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "osnova-ekb",
+  "name": "Основа",
+  "published": "2026-10-20"
+ },
+ {
+  "slug": "ideal-saratov",
+  "name": "Идеал",
+  "published": "2026-10-20"
  }
 ]
