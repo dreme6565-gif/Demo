@@ -230,11 +230,6 @@
   "published": "2026-10-22"
  },
  {
-  "slug": "cardi-ekb",
-  "name": "Cardi",
-  "published": "2026-10-22"
- },
- {
   "slug": "pro-kuzov-nsk",
   "name": "Pro kuzov",
   "published": "2026-10-22"
@@ -297,6 +292,11 @@
  {
   "slug": "autolife-kzn",
   "name": "Autolife detailing",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "sovetsky-detailing-kzn",
+  "name": "Советский детейлинг",
   "published": "2026-10-22"
  }
 ]
