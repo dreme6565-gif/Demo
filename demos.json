@@ -198,5 +198,105 @@
   "slug": "ideal-saratov",
   "name": "Идеал",
   "published": "2026-10-20"
+ },
+ {
+  "slug": "nol-tri",
+  "name": "Ноль Три",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "smk-ekb",
+  "name": "Smk",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "spartak-nsk",
+  "name": "Спартак",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "teamservice-kzn",
+  "name": "TeamService",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "proservice-ekb",
+  "name": "Proservice",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "steel-auto-ekb",
+  "name": "Steel_auto",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "cardi-ekb",
+  "name": "Cardi",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "pro-kuzov-nsk",
+  "name": "Pro kuzov",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "dominant-nsk",
+  "name": "Доминант",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "gagarin-spb",
+  "name": "Гагарин",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "avtosdelki-spb",
+  "name": "АвтоСделки",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "radius-22-kzn",
+  "name": "Радиус 22",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "avtobotinki-krd",
+  "name": "Автоботинки",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "shinochka-krd",
+  "name": "Шиночка",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "shinomontazh-n1-krd",
+  "name": "Шиномонтаж N1",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "pozharyuga-spb",
+  "name": "Пожарюга",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "pro-detailing-ekb",
+  "name": "Pro-detailing",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "mat-detail-ekb",
+  "name": "Мат detail",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "lincar-krd",
+  "name": "Lincar Detailing",
+  "published": "2026-10-22"
+ },
+ {
+  "slug": "autolife-kzn",
+  "name": "Autolife detailing",
+  "published": "2026-10-22"
  }
 ]
