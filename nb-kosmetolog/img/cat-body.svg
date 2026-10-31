@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Заглушка изображения">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8D0C9"/><stop offset="1" stop-color="#A9A39D"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/><ellipse cx="400" cy="420" rx="250" ry="320" fill="#F7F2EE" opacity=".28"/>
+<ellipse cx="400" cy="420" rx="170" ry="230" fill="none" stroke="#F7F2EE" stroke-width="3" opacity=".8"/><path d="M180 700 C330 600 470 800 640 690" fill="none" stroke="#F7F2EE" stroke-width="4" stroke-linecap="round"/><circle cx="640" cy="690" r="9" fill="#B3261E"/></svg>
