@@ -5,3 +5,4 @@ nb-kosmetolog
 sekret-omsk
 nb-cosmetology
 estet-kosmetologiya-tyumen
+yams-new
