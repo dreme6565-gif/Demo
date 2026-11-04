@@ -126,9 +126,11 @@ p{margin:0}
 .badges{padding:0;margin-top:0}
 .hero h1{max-width:9.5em;margin-bottom:22px}
 .hero__lead{font-size:clamp(16px,1.3vw,18px);max-width:30em;color:var(--muted);margin-bottom:32px}
-.hero__vis{position:relative;margin:6px calc(var(--pad)*-1) 0 8%;aspect-ratio:1800/1300;pointer-events:none}
+.hero__vis{position:relative;margin:6px calc(var(--pad)*-1) 0 8%;aspect-ratio:1448/1086;pointer-events:none}
 .hero__vis img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;
-  -webkit-mask-image:radial-gradient(ellipse 78% 74% at 56% 50%,#000 56%,transparent 100%);mask-image:radial-gradient(ellipse 78% 74% at 56% 50%,#000 56%,transparent 100%);will-change:transform}
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%),linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%),linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;will-change:transform}
+@media (min-width:900px){.hero__vis img{-webkit-mask-image:linear-gradient(90deg,transparent,#000 26%),linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 26%),linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}}
 @media (min-width:900px){
   .hero{padding-top:clamp(36px,4vw,64px)}
   .hero__grid{grid-template-columns:43% 57%;align-items:center;min-height:min(70vh,640px)}
@@ -270,8 +272,12 @@ p{margin:0}
 .svc__layout{position:relative}
 .svc__stones,.svc__amp{position:absolute;pointer-events:none;display:none}
 .svc__stones{left:calc(var(--pad)*-1);top:-10px;width:min(23vw,300px);aspect-ratio:900/1000}
+.svc__stones img{object-position:36% 60%}
 .svc__amp{right:calc(var(--pad)*-1);top:0;width:min(20vw,260px);aspect-ratio:900/1100}
+.svc__amp img{object-position:58% 60%}
 .svc__stones img,.svc__amp img{width:100%;height:100%;object-fit:cover}
+.svc__stones img{-webkit-mask-image:linear-gradient(90deg,#000 45%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 45%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
+.svc__amp img{-webkit-mask-image:linear-gradient(270deg,#000 45%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(270deg,#000 45%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
 @media (min-width:900px){.svc__stones,.svc__amp{display:block}.svc__main{margin-left:min(21vw,270px);margin-right:min(17vw,220px)}}
 .cats{display:none}
 @media (min-width:900px){
@@ -316,11 +322,11 @@ p{margin:0}
 /* ── о студии ── */
 .about__grid{display:grid;gap:30px;grid-template-columns:1fr;align-items:start}
 @media (min-width:900px){.about__grid{grid-template-columns:1.25fr .85fr 1fr;gap:36px}}
-.about__art{margin:18px -8px 0 -10px;aspect-ratio:1000/850}
-.about__art img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:radial-gradient(ellipse 80% 78% at 50% 50%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 80% 78% at 50% 50%,#000 52%,transparent 100%)}
+.about__art{margin:18px -8px 0 -10px;aspect-ratio:1200/800}
+.about__art img{width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent);mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent),linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
 .about p.lead{font-size:16.5px;color:var(--muted);margin-top:14px;max-width:30em}
 .spec{position:relative;text-align:center}
-.spec__ph{position:relative;aspect-ratio:800/1000;border-radius:200px 200px 28px 28px;overflow:hidden;background:var(--powder)}
+.spec__ph{position:relative;aspect-ratio:900/1200;border-radius:200px 200px 28px 28px;overflow:hidden;background:var(--powder)}
 .spec__ph img{width:100%;height:100%;object-fit:cover}
 .spec__ph span{position:absolute;left:12px;right:12px;bottom:18px;background:rgba(255,255,255,.82);border-radius:999px;padding:9px 12px;font-size:13.5px;font-weight:600}
 .spec h3{margin-top:18px}
