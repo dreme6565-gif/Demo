@@ -6,3 +6,4 @@ sekret-omsk
 nb-cosmetology
 estet-kosmetologiya-tyumen
 yams-new
+estet-kosmetologiya-tyumen-new
