@@ -1,0 +1,2 @@
+.dentis-surface-light{background:#F5F2EC;color:#0E1B3D}.dentis-surface-dark{background:#0A1330;color:#F5F2EC}.dentis-surface-enamel{background:#DCE6FF;color:#0E1B3D}.dentis-surface-steps{background:#E6EBF3;color:#0E1B3D}
+.dentis-receipt{position:relative;background:#F5F2EC;color:#0E1B3D}.dentis-receipt::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:url('../assets/graphics/receipt-edge.svg') repeat-x left top;background-size:12px 8px;pointer-events:none}

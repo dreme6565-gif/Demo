@@ -1,0 +1,3 @@
+@font-face{font-family:Geologica;src:url('../assets/fonts/Geologica-Variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:Onest;src:url('../assets/fonts/Onest-Variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+:root{--porcelain:#F5F2EC;--ink:#0E1B3D;--cobalt:#2347E8;--enamel:#DCE6FF;--deep:#0A1330;--muted:#566079;--muted-dark:#BDC7DD;--steps:#E6EBF3;--selected:#8AA5FF;--font-heading:Geologica,sans-serif;--font-body:Onest,sans-serif}
