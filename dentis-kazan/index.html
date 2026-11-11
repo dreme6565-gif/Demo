@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Дентис — стоматология в Казани</title>
+<meta name="description" content="Лечение, имплантация, протезирование и брекеты в Казани. Цены на 41 процедуру и расчёт плана лечения на сайте.">
+<style>
+:root{--bg:#f6f8f7;--surf:#fff;--ink:#12302b;--mute:#5d726d;--line:#dbe5e1;--acc:#0e7a6b;--acc2:#0a5c51;--soft:#e3f1ed;--warm:#f2e9dd;--r:14px}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1917;--surf:#15251f;--ink:#e8f1ee;--mute:#9db3ad;--line:#25403a;--acc:#3fc2ac;--acc2:#7fe0cf;--soft:#173129;--warm:#2a2a22}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.01em;line-height:1.1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-family:Georgia,serif;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--acc);display:inline-block}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--mute);background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 1px no-repeat;transition:background-size .25s,color .2s;padding:4px 0}
+nav a:hover{color:var(--ink);background-size:100% 1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--acc);color:#fff;font:600 15px/1 inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:transform .15s,background .2s}
+.btn:hover{background:var(--acc2);transform:translateY(-1px)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--soft)}
+@media(prefers-color-scheme:dark){.btn{color:#06201a}}
+section{padding:72px 0}
+h2{font-size:clamp(30px,4.4vw,46px);margin-bottom:12px}
+.lead{color:var(--mute);max-width:560px;margin-bottom:32px}
+/* hero */
+.hero{padding:64px 0 56px;min-height:calc(100svh - 60px);display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,76px);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p{color:var(--mute);font-size:18px;max-width:520px;margin-bottom:28px}
+.acts{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;gap:12px}
+.fact{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:flex;align-items:baseline;gap:16px;transition:transform .2s}
+.fact:hover{transform:translateY(-2px)}
+.fact b{font:500 44px/1 Georgia,serif;color:var(--acc);min-width:92px}
+.fact span{color:var(--mute);font-size:15px}
+[data-enter]>*{animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+[data-enter]>*:nth-child(2){animation-delay:.08s}[data-enter]>*:nth-child(3){animation-delay:.16s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:transform .2s,border-color .2s;text-decoration:none;display:block}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{color:var(--mute);font-size:14.5px;margin-bottom:14px}
+.card small{color:var(--acc);font-weight:600}
+/* price */
+.price{background:var(--soft)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--surf);color:var(--ink);font:500 15px inherit;font-family:inherit;cursor:pointer;transition:background .2s,transform .15s}
+.tab:hover{transform:translateY(-1px)}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.calc{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.list{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.row{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;min-height:56px;padding:12px 18px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer;transition:background .15s}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--bg)}
+.row .n{flex:1}
+.row .p{font-weight:600;white-space:nowrap}
+.row .a{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--acc);color:var(--acc);display:grid;place-items:center;font-size:18px;line-height:1;flex:none;transition:all .15s}
+.row[aria-pressed=true] .a{background:var(--acc);color:#fff}
+.row[aria-pressed=true]{background:var(--soft)}
+.receipt{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:22px;position:sticky;top:76px}
+.receipt h3{font-size:22px;margin-bottom:12px}
+.receipt ul{list-style:none;padding:0;margin:0 0 14px;max-height:240px;overflow:auto;font-size:14.5px}
+.receipt li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.receipt .empty{color:var(--mute);border:0;padding:4px 0}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.tot b{font:500 34px Georgia,serif}
+.note{font-size:13px;color:var(--mute);margin-bottom:14px}
+.receipt .btn{width:100%}
+.msg{margin-top:12px;font-size:14px;color:var(--acc2);min-height:20px}
+/* steps / urgent */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.urgent{background:var(--ink);color:var(--bg);border-radius:var(--r);padding:36px}
+.urgent h2{font-size:clamp(28px,3.6vw,40px)}
+.urgent p{opacity:.8;margin-bottom:22px;max-width:420px}
+.urgent .btn{background:var(--bg);color:var(--ink)}
+.steps{display:grid;gap:10px;counter-reset:s}
+.step{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px 18px 62px;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--acc);display:grid;place-items:center;font-weight:700}
+.step b{display:block}
+.step span{color:var(--mute);font-size:14.5px}
+/* form */
+.visit{background:var(--warm)}
+form{display:grid;gap:12px;max-width:520px}
+label{display:grid;gap:6px;font-size:14px;color:var(--mute)}
+input,select{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:0 14px;font:inherit}
+input:focus,select:focus,.row:focus-visible,.tab:focus-visible,.btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+footer{padding:36px 0 48px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){.hero .wrap,.calc,.split{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.receipt{position:static}nav{display:none}section{padding:56px 0}.hero{min-height:0}}
+@media(max-width:520px){.svc{grid-template-columns:1fr}.btn{width:100%}.acts{flex-direction:column}header .btn{width:auto}.fact b{font-size:36px;min-width:76px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#"><i></i>Дентис</a>
+  <nav><a href="#uslugi">Услуги</a><a href="#ceny">Цены</a><a href="#kak">Как проходит приём</a><a href="#zapis">Запись</a></nav>
+  <a class="btn" href="#zapis">Записаться</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <div data-enter>
+    <h1>Стоматология в&nbsp;Казани, где цена <em>известна до&nbsp;приёма</em></h1>
+    <p>Лечение, имплантация, протезы и брекеты. Соберите план лечения из 41 процедуры и сразу увидите итоговую сумму.</p>
+    <div class="acts"><a class="btn" href="#ceny">Рассчитать лечение</a><a class="btn ghost" href="#zapis">Записаться на приём</a></div>
+  </div>
+  <div class="facts" data-enter>
+    <div class="fact"><b>4,9</b><span>средняя оценка по 98 оценкам пациентов</span></div>
+    <div class="fact"><b>41</b><span>процедуры с ценами в открытом прайсе</span></div>
+    <div class="fact"><b>700&nbsp;₽</b><span>первичный приём ортодонта</span></div>
+  </div>
+</div></section>
+
+<section id="uslugi"><div class="wrap">
+  <h2>Что лечим</h2>
+  <p class="lead">Четыре направления в одной клинике: не нужно искать отдельного хирурга или ортопеда.</p>
+  <div class="svc">
+    <a class="card" href="#ceny" data-go="Терапия"><h3>Лечение зубов</h3><p>Кариес, пульпит, периодонтит, реставрация.</p><small>от 2 500 ₽</small></a>
+    <a class="card" href="#ceny" data-go="Имплантация"><h3>Имплантация</h3><p>Имплантаты Osstem и Straumann, синус-лифтинг.</p><small>от 24 000 ₽</small></a>
+    <a class="card" href="#ceny" data-go="Протезирование"><h3>Протезирование</h3><p>Коронки, съёмные протезы, работа на имплантах.</p><small>от 12 000 ₽</small></a>
+    <a class="card" href="#ceny" data-go="Ортодонтия"><h3>Брекеты</h3><p>Лигатурные и Damon Q, пластинки, контроль лечения.</p><small>от 700 ₽</small></a>
+  </div>
+</div></section>
+
+<section id="ceny" class="price"><div class="wrap">
+  <h2>Цены и план лечения</h2>
+  <p class="lead">Нажимайте на процедуры: они попадут в чек справа. Это ориентир, точную сумму врач назовёт после осмотра.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="calc">
+    <div class="list" id="list"></div>
+    <aside class="receipt" aria-live="polite">
+      <h3>Ваш план</h3>
+      <ul id="items"><li class="empty">Пока ничего не выбрано</li></ul>
+      <div class="tot"><span>Итого</span><b id="total">0 ₽</b></div>
+      <p class="note">Цены ориентировочные и не являются публичной офертой.</p>
+      <a class="btn" href="#zapis" id="send">Записаться с этим планом</a>
+    </aside>
+  </div>
+</div></section>
+
+<section id="kak"><div class="wrap split">
+  <div class="urgent">
+    <h2>Болит прямо сейчас?</h2>
+    <p>Принимаем с острой болью: первая помощь при пульпите стоит 2 500 ₽, при периодонтите 3 500 ₽.</p>
+    <a class="btn" href="#zapis">Записаться на сегодня</a>
+  </div>
+  <div>
+    <h2>Как проходит приём</h2>
+    <div class="steps" style="margin-top:18px">
+      <div class="step"><b>Осмотр и план</b><span>Врач объясняет, что нужно лечить сейчас, а что подождёт.</span></div>
+      <div class="step"><b>Цена до лечения</b><span>Вы видите стоимость каждого этапа и решаете сами.</span></div>
+      <div class="step"><b>Лечение с обезболиванием</b><span>Работаем с импортными анестетиками, укол стоит 500 ₽.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="zapis" class="visit"><div class="wrap split">
+  <div>
+    <h2>Запишитесь на приём</h2>
+    <p class="lead">Оставьте имя и телефон, администратор перезвонит и подберёт время. Клиника находится на Поперечно-Базарной улице в Казани.</p>
+  </div>
+  <form id="f" novalidate>
+    <label>Имя<input name="n" autocomplete="name" required></label>
+    <label>Телефон<input name="t" type="tel" autocomplete="tel" required></label>
+    <label>Что беспокоит<select name="w"><option>Лечение зуба</option><option>Имплантация</option><option>Протезирование</option><option>Брекеты</option><option>Не знаю, нужен осмотр</option></select></label>
+    <button class="btn" type="submit">Отправить заявку</button>
+    <p class="msg" id="msg" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Дентис, стоматологическая клиника, Казань</span>
+  <span>Демо-версия сайта. Цены и сведения из публичной карточки клиники в 2ГИС, форма никуда не отправляет данные.</span>
+</div></footer>
+
+<script>
+const D={
+"Терапия":[["Лечение кариеса",4000],["Эстетическая реставрация зуба",6000],["Пломба после лечения каналов",4500],["Пломбирование канала зуба",4000],["Штифт титановый или стекловолоконный",2500],["Первая помощь при пульпите",2500],["Первая помощь при периодонтите",3500],["Вскрытие абсцесса (дренаж)",2500]],
+"Гигиена":[["Ультразвуковая чистка",2500],["Комплексная чистка Air-flow",4000],["Пародонтальная чистка",10000],["Глубокое фторирование",1500],["Отбеливание",14500]],
+"Хирургия":[["Удаление зуба простое",2000],["Удаление зуба мудрости",4000],["Анестезия импортным анестетиком",500],["Синус-лифтинг закрытый",12000],["Синус-лифтинг открытый",35000]],
+"Имплантация":[["Имплантат Osstem (Корея)",24000],["Имплантат Straumann (Швейцария)",40000],["Формирователь десны",3000],["Мультиюнит",6000]],
+"Протезирование":[["Металлокерамическая коронка",12000],["Циркониевая коронка",18000],["Металлокерамика на импланте",22000],["Цирконий на импланте",27000],["Фиксация коронки",1500],["Съёмный протез акриловый",20000],["Съёмный протез нейлоновый",30000],["Микропротез акриловый",12000],["Микропротез нейлоновый",15000],["Починка протеза",4000]],
+"Ортодонтия":[["Первичный приём ортодонта",700],["Повторный приём с планом лечения",1500],["Малый функциональный анализ для брекетов",13000],["Ортодонтическая пластинка",18000],["Лигатурные брекеты, 1 челюсть",40000],["Damon Q, 1 челюсть",100000],["Активация брекетов",2000],["Замена дуги",4500],["Снятие брекетов (из другой клиники)",15000]]
+};
+const fmt=n=>n.toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+const tabs=document.getElementById('tabs'),list=document.getElementById('list'),items=document.getElementById('items'),totalEl=document.getElementById('total');
+const sel=new Map();let cur='Терапия';
+function renderTabs(){tabs.innerHTML='';Object.keys(D).forEach(k=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.textContent=k;b.setAttribute('aria-selected',k===cur);b.onclick=()=>{cur=k;renderTabs();renderList()};tabs.appendChild(b)})}
+function renderList(){list.innerHTML='';D[cur].forEach(([n,p])=>{const k=cur+n;const b=document.createElement('button');b.className='row';b.setAttribute('aria-pressed',sel.has(k));b.innerHTML='<span class="n"></span><span class="p">'+fmt(p)+'</span><span class="a">'+(sel.has(k)?'✓':'+')+'</span>';b.firstChild.textContent=n;b.onclick=()=>{sel.has(k)?sel.delete(k):sel.set(k,[n,p]);renderList();renderReceipt()};list.appendChild(b)})}
+function renderReceipt(){items.innerHTML='';let t=0;if(!sel.size){items.innerHTML='<li class="empty">Пока ничего не выбрано</li>'}sel.forEach(([n,p])=>{t+=p;const li=document.createElement('li');const a=document.createElement('span');a.textContent=n;const b=document.createElement('span');b.textContent=fmt(p);li.append(a,b);items.appendChild(li)});totalEl.textContent=fmt(t)}
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>{cur=a.dataset.go;renderTabs();renderList()}));
+renderTabs();renderList();
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const f=e.target,m=document.getElementById('msg');
+if(!f.n.value.trim()||f.t.value.replace(/\D/g,'').length<10){m.textContent='Укажите имя и телефон полностью.';m.style.color='#b3261e';return}
+m.style.color='';m.textContent='Это демо-версия: заявка никуда не отправляется. На рабочем сайте она придёт администратору в WhatsApp.'});
+</script>
+</body>
+</html>
