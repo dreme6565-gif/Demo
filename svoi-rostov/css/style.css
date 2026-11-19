@@ -618,3 +618,8 @@ html { overflow-x: clip; }
 @media (max-width: 359px) {
   .h2--visit { font-size: 38px; }
 }
+
+/* Плавная прокрутка по ссылкам «Выбрать услуги», меню, «Наверх» (кроме режима без движения) */
+@media (prefers-reduced-motion: no-preference) { html:not(.rm) { scroll-behavior: smooth; } }
+/* Холсты цветов по «большой» высоте экрана: адресная строка телефона не пересоздаёт их при прокрутке */
+.gl-back, .gl-front { bottom: auto; height: 100vh; height: 100lvh; }

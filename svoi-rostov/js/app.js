@@ -439,7 +439,7 @@ function objState(o, p, P, W, H, m) {
   let op = 1;
   if (o.oIn) op *= ease(ramp(p, o.oIn[0], o.oIn[1]));
   if (o.oOut) op *= 1 - ease(ramp(p, o.oOut[0], o.oOut[1]));
-  return { id: o.id, mesh: o.mesh, ...st, o: op };
+  return { id: o.id, mesh: o.mesh, ...st, o: op, back: (m && o.mZ ? o.mZ : o.z) < 0 };
 }
 
 // ——— Прорисовка заголовков: заливка — маска по настоящим глифам, контур — декоративный SVG без подмены текста ———
@@ -491,8 +491,11 @@ function setDraw(o, d) {
 // ——— Геометрия стыков: измеряемые края секций ———
 const docTop = (el) => el.getBoundingClientRect().top + window.scrollY;
 const docBottom = (el) => el.getBoundingClientRect().bottom + window.scrollY;
+let vhStable = 0, lastW = 0;
 function measure() {
-  const vh = window.innerHeight, m = mqMobile.matches;
+  const w = document.documentElement.clientWidth;
+  if (!vhStable || w !== lastW) { vhStable = window.innerHeight; lastW = w; } // меняем только при смене ширины/поворота
+  const vh = vhStable, m = mqMobile.matches;
   const cards = $$('.card'), qas = $$('.qa');
   const lastCard = cards[cards.length - 1] || $('#services'), lastQa = qas[qas.length - 1] || $('#faq');
   const win = {
@@ -582,9 +585,8 @@ function frame(now = performance.now()) {
 }
 function schedule() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
 function relayout(snap = false) { measure(); if (snap) snapNext = true; schedule(); }
-window.addEventListener('hashchange', () => { snapNext = true; schedule(); });
 window.addEventListener('scroll', schedule, { passive: true });
-window.addEventListener('resize', () => { relayout(true); updateSelbar(); });
+window.addEventListener('resize', () => { const wChanged = document.documentElement.clientWidth !== lastW; relayout(wChanged); updateSelbar(); });
 mqMobile.addEventListener('change', () => { relayout(true); updateSelbar(); });
 let roT = 0;
 new ResizeObserver(() => { clearTimeout(roT); roT = setTimeout(relayout, 60); }).observe(document.body); // в т.ч. открытие FAQ
@@ -614,7 +616,7 @@ async function startGL() {
   if (isRM() || root.classList.contains('no3d') || !tracks) return;
   if (!webglAvailable()) { to3dFallback('нет WebGL'); return; }
   try {
-    const { createBlossoms } = await import('./scene.js?v=36');
+    const { createBlossoms } = await import('./scene.js?v=37');
     glBack = document.createElement('canvas'); glBack.className = 'gl-back'; glBack.setAttribute('aria-hidden', 'true');
     glFront = document.createElement('canvas'); glFront.className = 'gl-front'; glFront.setAttribute('aria-hidden', 'true');
     document.body.prepend(glBack); document.body.appendChild(glFront);
@@ -641,7 +643,7 @@ async function init() {
   if (trRes.status === 'fulfilled') tracks = trRes.value; else root.classList.add('no3d');
   new IntersectionObserver(([en]) => { estimateInView = en.isIntersecting; updateSelbar(); }, { threshold: 0.05 }).observe($('#estimate'));
   measure(); frame();
-  const go = () => (window.requestIdleCallback ? requestIdleCallback(startGL, { timeout: 1200 }) : setTimeout(startGL, 300));
+  const go = () => (window.requestIdleCallback ? requestIdleCallback(startGL, { timeout: 300 }) : setTimeout(startGL, 300));
   if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
 }
 init();
