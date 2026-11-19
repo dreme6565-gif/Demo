@@ -346,8 +346,6 @@ $('[data-tabs]').addEventListener('keydown', (e) => {
 // Каждый цветок летит между опорными WebP-цветами в разметке ([data-flw]); изгиб и глубина — из scroll-tracks.json.
 // Прогресс стыка — функция положения измеряемых краёв секций; всё обратимо, один rAF.
 let tracks = null;
-let stage = null;
-let glBack = null, glFront = null;
 let lastKey = '';
 const SVGNS = 'http://www.w3.org/2000/svg';
 const heroPhoto = $('.hero__photo');
@@ -534,25 +532,57 @@ function applyDOM(pr, sm = pr) {
   setDraw(draws[1], ramp(pr.B, 0.16, 0.68));
 }
 
-function renderGL(pr) {
-  if (!stage || !tracks) return;
-  const W = glFront.clientWidth, H = glFront.clientHeight, m = metrics.m;
-  const items = [];
+// Цветы — те же WebP, что стоят в разметке как опорные: они уже загружены, поэтому движение начинается сразу.
+// Два фиксированных слоя: под текстом (z-index 1) и над ним (z-index 6); позиция, масштаб, наклон и прозрачность — через transform.
+let flBack = null, flFront = null;
+const sprites = new Map(); // id → <img>
+function ensureLayers() {
+  if (flBack) return;
+  const mk = (cls) => { const d = document.createElement('div'); d.className = `fl-layer ${cls}`; d.setAttribute('aria-hidden', 'true'); return d; };
+  flBack = mk('fl-back'); flFront = mk('fl-front');
+  document.body.prepend(flBack); document.body.appendChild(flFront);
+}
+function sprite(st) {
+  let el = sprites.get(st.id);
+  if (!el) {
+    el = document.createElement('img');
+    el.alt = ''; el.decoding = 'async'; el.draggable = false; el.src = SPRITE_SRC[st.mesh];
+    sprites.set(st.id, el);
+  }
+  const layer = st.back ? flBack : flFront;
+  if (el.parentNode !== layer) layer.appendChild(el);
+  return el;
+}
+const SPRITE_SRC = { sakura: 'assets/flowers/sakura.webp', orchid: 'assets/flowers/orchid.webp', 'sakura-side': 'assets/flowers/sakura-side.webp', petal: 'assets/flowers/petal.webp' };
+const ASPECT = { sakura: 523 / 531, orchid: 520 / 540, 'sakura-side': 539 / 473, petal: 414 / 515 };
+
+function renderFlowers(pr) {
+  if (!tracks || !motionOn()) return;
+  ensureLayers();
+  const W = document.documentElement.clientWidth, H = window.innerHeight, m = metrics.m;
+  const seen = new Set();
+  let n = 0;
   for (const k in SEAMS) {
     const P = tracks.seams[k][m ? 'mobile' : 'desktop'];
     for (const o of SEAMS[k].objs) {
       const st = objState(o, pr[k], P, W, H, m);
       if (!st || st.o < 0.004) continue;
       if (st.y < -st.w || st.y > H + st.w || st.x < -st.w * 1.2 || st.x > W + st.w * 1.2) continue;
-      items.push(st);
+      const el = sprite(st);
+      seen.add(st.id); n++;
+      el.style.width = `${st.w.toFixed(1)}px`;
+      el.style.zIndex = String(Math.round((st.z + 1) * 100));
+      el.style.opacity = st.o.toFixed(3);
+      el.style.display = 'block';
+      el.style.transform = `translate3d(${(st.x - st.w / 2).toFixed(1)}px, ${(st.y - st.w * (ASPECT[st.mesh] || 1) / 2).toFixed(1)}px, 0) perspective(900px) rotateX(${st.rx.toFixed(1)}deg) rotateY(${st.ry.toFixed(1)}deg) rotate(${st.rz.toFixed(1)}deg)`;
     }
   }
-  const key = `${W}x${H}|` + items.map((s) => `${s.id}${s.x.toFixed(1)},${s.y.toFixed(1)},${s.w.toFixed(1)},${s.rz.toFixed(1)},${s.o.toFixed(3)}`).join(';');
-  if (key === lastKey) return;
-  lastKey = key;
-  stage.setSize(W, H);
-  stage.frame(items);
-  root.classList.add('gl-on');
+  sprites.forEach((el, id) => { if (!seen.has(id)) el.style.display = 'none'; });
+  if (!root.classList.contains('gl-on')) {
+    // опорные картинки скрываем, только когда подвижные уже готовы к показу
+    const ready = [...sprites.values()].every((el) => el.complete);
+    if (ready) root.classList.add('gl-on');
+  }
 }
 
 // Цветы мягко догоняют прокрутку (экспоненциальное сглаживание по времени): при резком рывке они не прыгают,
@@ -579,7 +609,7 @@ function frame(now = performance.now()) {
   const pr = progress();
   const moving = smoothStep(pr, now);
   applyDOM(pr, smooth);
-  renderGL(smooth);
+  renderFlowers(smooth);
   window.__svoi = { ...pr, smooth: { ...smooth }, win: metrics.win, vh: metrics.vh, m: metrics.m };
   if (moving) schedule();
 }
@@ -601,31 +631,6 @@ function observeCards() {
   $$('.card').forEach((c) => io.observe(c));
 }
 
-function to3dFallback(reason) {
-  console.warn('[svoi] 3D отключено:', reason);
-  root.classList.add('no3d');
-  root.classList.remove('gl-on');
-  stage = null;
-  relayout();
-}
-window.addEventListener('svoi:gl-lost', () => to3dFallback('context lost'));
-function webglAvailable() {
-  try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; }
-}
-async function startGL() {
-  if (isRM() || root.classList.contains('no3d') || !tracks) return;
-  if (!webglAvailable()) { to3dFallback('нет WebGL'); return; }
-  try {
-    const { createBlossoms } = await import('./scene.js?v=37');
-    glBack = document.createElement('canvas'); glBack.className = 'gl-back'; glBack.setAttribute('aria-hidden', 'true');
-    glFront = document.createElement('canvas'); glFront.className = 'gl-front'; glFront.setAttribute('aria-hidden', 'true');
-    document.body.prepend(glBack); document.body.appendChild(glFront);
-    const s = createBlossoms({ back: glBack, front: glFront, mobile: mqMobile.matches });
-    await s.load('assets/3d/blossoms.glb'); // WebP-цветы остаются до первого успешного кадра
-    stage = s; lastKey = ''; schedule();
-  } catch (err) { to3dFallback(err); }
-}
-
 // ——— Старт ———
 async function init() {
   const [catRes, trRes] = await Promise.allSettled([
@@ -643,7 +648,5 @@ async function init() {
   if (trRes.status === 'fulfilled') tracks = trRes.value; else root.classList.add('no3d');
   new IntersectionObserver(([en]) => { estimateInView = en.isIntersecting; updateSelbar(); }, { threshold: 0.05 }).observe($('#estimate'));
   measure(); frame();
-  const go = () => (window.requestIdleCallback ? requestIdleCallback(startGL, { timeout: 300 }) : setTimeout(startGL, 300));
-  if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
 }
 init();
