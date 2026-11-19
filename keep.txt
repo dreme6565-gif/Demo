@@ -1,0 +1,13 @@
+# Демо, которые НЕ удалять при чистке (по одной папке на строку).
+# Пример:
+# kat-i-dog
+nb-kosmetolog
+sekret-omsk
+nb-cosmetology
+estet-kosmetologiya-tyumen
+yams-new
+estet-kosmetologiya-tyumen-new
+sekret-omsk-new
+dentis-kazan
+kunak-primer
+kosmetolog-primer

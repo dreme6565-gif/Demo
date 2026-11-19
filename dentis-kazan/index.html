@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дентис: стоматология в Казани, цена известна до приёма</title>
+<meta name="description" content="Отметьте процедуры, увидите ориентир по стоимости и отправьте план в WhatsApp. Демо-концепция, неофициальный сайт клиники.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5F2EC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Дентис: стоматология в Казани">
+<meta property="og:description" content="Спокойно. Вы знаете цену. Расчёт плана лечения до приёма.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/images/dentis-room.webp" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/images/dentis-room-mobile.webp" media="(max-width: 699px)" fetchpriority="high">
+<link rel="stylesheet" href="css/design-tokens.css">
+<link rel="stylesheet" href="css/hero-light.css">
+<link rel="stylesheet" href="css/section-surfaces.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+
+<header class="top" id="top">
+  <div class="wrap top__bar">
+    <a class="logo" href="#top" aria-label="Дентис, в начало">дентис<sup>°</sup></a>
+    <nav class="top__nav" aria-label="Основное меню">
+      <a href="#napravleniya">Направления</a>
+      <a href="#plan">План и стоимость</a>
+      <a href="#kak">Как добраться</a>
+    </nav>
+    <p class="top__where">Казань<br><span>Авиастроительный район</span></p>
+    <a class="btn btn--sm top__cta" href="#plan" data-wa>Записаться в WhatsApp<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5"/></svg></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню"><span></span><span></span></button>
+  </div>
+  <nav class="menu" id="menu" aria-label="Мобильное меню" hidden>
+    <a href="#napravleniya">Направления</a>
+    <a href="#plan">План и стоимость</a>
+    <a href="#kak">Как добраться</a>
+    <a href="#plan" class="btn" data-wa>Записаться в WhatsApp<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5"/></svg></a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero dentis-hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="hero__meta">
+        <p class="eyebrow">Частная стоматология · Казань</p>
+        <p class="rating" data-fade><b>4,9</b><span class="stars" aria-hidden="true">★★★★★</span><span>98 оценок в 2ГИС</span></p>
+      </div>
+      <h1 id="h1" class="h1">
+        <span class="ln"><span>Спокойно.</span></span>
+        <span class="ln"><span>Вы знаете <em>цену.</em></span></span>
+      </h1>
+      <div class="hero__grid">
+        <div class="hero__text" data-reveal>
+          <p class="lead">Отметьте нужные процедуры. Узнайте ориентир по стоимости ещё до первого приёма.</p>
+          <a class="btn btn--lg" href="#plan" data-wa>Записаться в WhatsApp<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5"/></svg></a>
+          <p class="note">Сначала соберите план лечения ↓<br>Точная стоимость — после осмотра.</p>
+        </div>
+        <figure class="hero__photo" data-parallax>
+          <span class="badge" aria-hidden="true">Больше ясности.<br>Меньше тревоги.</span>
+          <picture>
+            <source media="(max-width: 699px)" srcset="assets/images/dentis-room-mobile.webp" width="1050" height="792">
+            <img class="dentis-hero-image" src="assets/images/dentis-room.webp" width="1536" height="1024" alt="Светлый стоматологический кабинет: кресло цвета слоновой кости, лампа и синий табурет у большого окна" fetchpriority="high" decoding="async">
+          </picture>
+          <figcaption class="pill">Концептуальный интерьер</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Цены из прайса">
+    <div class="strip__track" id="strip">
+      <ul class="strip__list">
+        <li>Кариес 4 000 ₽</li><li class="star" aria-hidden="true">✳</li>
+        <li>Чистка 2 500 ₽</li><li class="star" aria-hidden="true">✳</li>
+        <li>Osstem 24 000 ₽</li><li class="star" aria-hidden="true">✳</li>
+        <li>Приём ортодонта 700 ₽</li><li class="star" aria-hidden="true">✳</li>
+      </ul>
+    </div>
+    <button class="strip__pause" type="button" id="stripPause" aria-pressed="false">Пауза</button>
+  </section>
+
+  <section class="sec services" id="napravleniya" aria-labelledby="h-serv">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">01 / Направления</p>
+        <h2 class="h2" id="h-serv" data-reveal>Для вашей улыбки.<br>С понятной ценой.</h2>
+      </div>
+      <div class="services__grid">
+        <figure class="services__photo" data-reveal data-hoverzoom>
+          <picture>
+            <source media="(max-width: 699px)" srcset="assets/images/dentis-sculpture-mobile.webp" width="1050" height="684">
+            <img src="assets/images/dentis-sculpture.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Керамическая модель зуба в разрезе рядом с титановым имплантом на синем постаменте">
+          </picture>
+        </figure>
+        <div>
+          <ul class="dir" id="dir"></ul>
+          <p class="foot">Ориентировочные цены за процедуру. Состав лечения — после осмотра.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec calc dentis-surface-dark" id="plan" aria-labelledby="h-plan">
+    <div class="wrap">
+      <div class="sec__head sec__head--dark">
+        <p class="eyebrow">02 / Ваш план лечения</p>
+        <h2 class="h2" id="h-plan">Сначала — посчитаем.</h2>
+      </div>
+      <div class="calc__grid">
+        <div class="calc__main">
+          <p class="sub">Выберите процедуры. Каждая появится в вашем чеке, а сумма обновится сразу.</p>
+          <div class="tabs" role="group" aria-label="Категории процедур" id="tabs"></div>
+          <ul class="list" id="list"></ul>
+          <p class="foot foot--dark">Выбор процедур — ориентир для обсуждения с врачом, а не назначение. Количество и необходимые этапы уточняются после диагностики.</p>
+          <p class="warn" id="implantWarn" hidden>Имплантат, формирователь, абатмент, хирургические этапы и коронка — отдельные позиции. Цена имплантата не равна стоимости лечения под ключ. Что нужно именно вам, определит врач.</p>
+        </div>
+        <aside class="receipt dentis-receipt" id="receipt" aria-label="Чек: предварительный расчёт">
+          <div class="receipt__in">
+            <button class="receipt__close" type="button" id="receiptClose" aria-label="Закрыть чек">×</button>
+            <p class="receipt__logo">дентис<sup>°</sup></p>
+            <p class="receipt__label">Предварительный расчёт</p>
+            <h3 class="receipt__title" id="receiptTitle">Ваш план</h3>
+            <ul class="receipt__lines" id="lines"></ul>
+            <div class="receipt__sum"><span>Ориентировочно</span><output id="total" aria-live="polite">0 ₽</output></div>
+            <p class="receipt__note">Точная сумма — после осмотра и согласования плана лечения.</p>
+            <button class="btn btn--block" type="button" id="send" data-wa-send>Записаться в WhatsApp<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5"/></svg></button>
+            <p class="receipt__note receipt__note--small" id="sendNote">В сообщении — процедуры и сумма.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec open" id="ceny" aria-labelledby="h-open">
+    <div class="wrap">
+      <p class="eyebrow">03 / Открытые цены</p>
+      <h2 class="h2 h2--xl" id="h-open" data-reveal>Когда понятна <span class="price-word">цена,</span><br>проще сделать первый шаг.</h2>
+      <div class="range" data-reveal>
+        <span class="range__a">500&nbsp;₽</span>
+        <span class="range__dash" aria-hidden="true"></span>
+        <span class="range__b">100&nbsp;000&nbsp;₽</span>
+        <p class="range__note">От анестезии до Damon Q за челюсть — цены из прайса, доступные до записи.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec steps dentis-surface-steps" id="shagi" aria-labelledby="h-steps">
+    <div class="wrap">
+      <div class="sec__head">
+        <p class="eyebrow">04 / Как записаться</p>
+        <h2 class="h2" id="h-steps">Три шага до приёма.</h2>
+      </div>
+      <ol class="steps__list">
+        <li data-reveal><span class="n">01</span><h3>Отметьте процедуры</h3><p>Соберите план и посмотрите ориентировочную сумму.</p></li>
+        <li data-reveal><span class="n">02</span><h3>Отправьте в WhatsApp</h3><p>В сообщении уже будут выбранные процедуры и итог.</p></li>
+        <li data-reveal><span class="n">03</span><h3>Выберите время</h3><p>Уточните детали и согласуйте время приёма с клиникой.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec faq" id="voprosy" aria-labelledby="h-faq">
+    <div class="wrap faq__grid">
+      <div>
+        <p class="eyebrow">05 / Вопросы</p>
+        <h2 class="h2" id="h-faq">Давайте<br>проясним.</h2>
+      </div>
+      <div class="faq__list" id="faq"></div>
+    </div>
+  </section>
+
+  <section class="sec near" id="kak" aria-labelledby="h-near">
+    <div class="wrap">
+      <div class="near__box dentis-surface-enamel">
+        <p class="eyebrow">06 / Рядом с вами</p>
+        <h2 class="near__city" id="h-near">Казань</h2>
+        <svg class="near__star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4v92M4 50h92M17 17l66 66M83 17 17 83" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none"/></svg>
+        <div class="near__row">
+          <div>
+            <p class="near__street">Поперечно-Базарная улица</p>
+            <p class="near__small">Авиастроительный район<br>Точный адрес уточните при записи.</p>
+          </div>
+          <a class="btn btn--lg" href="#plan" data-wa>Записаться в WhatsApp<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot-site">
+  <div class="wrap foot-site__in">
+    <p class="logo">дентис<sup>°</sup></p>
+    <nav class="foot-site__links" aria-label="Юридические страницы"><a href="privacy.html">Конфиденциальность <span aria-hidden="true">↗</span></a><a href="terms.html">Условия <span aria-hidden="true">↗</span></a></nav>
+    <p class="legal">Демо-концепция. Неофициальный сайт клиники. Изображения — визуализация. Цены ориентировочные, не являются публичной офертой. Точный состав и стоимость лечения определяются после осмотра. Контакт WhatsApp в демо не подключён.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock" hidden>
+  <div class="dock__info"><b id="dockTotal">0 ₽</b><span id="dockCount">0 процедур · ориентировочно</span></div>
+  <button class="btn btn--sheet" type="button" id="dockOpen" aria-haspopup="dialog" aria-controls="receipt">Открыть чек <span aria-hidden="true">↑</span></button>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+
+<dialog class="copybox" id="copybox" aria-labelledby="copyTitle">
+  <form method="dialog">
+    <h2 id="copyTitle" class="copybox__title">Сообщение для WhatsApp</h2>
+    <p class="copybox__lead">Контакт WhatsApp в демо не подключён, поэтому ссылка не создана. Скопируйте текст и отправьте его клинике сами.</p>
+    <textarea id="copyText" readonly rows="6" aria-label="Текст сообщения"></textarea>
+    <div class="copybox__row">
+      <button class="btn" type="button" id="copyBtn">Скопировать текст</button>
+      <button class="btn btn--ghost" value="close">Закрыть</button>
+    </div>
+    <p class="copybox__status" role="status" id="copyStatus"></p>
+  </form>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Меню — Кунак (пример сайта)</title>
+<meta name="description" content="Пример сайта для ресторана: дагестанское кафе «Кунак» (вымышленное). Меню, анимации, звонок в один тап.">
+<meta name="theme-color" content="#F4E8CF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  (function () {
+    var d = document.documentElement;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    d.classList.add('anim');
+    setTimeout(function () { if (!window.__mfReady) d.classList.remove('anim'); }, 2500);
+  })();
+</script>
+</head>
+<body class="page-menu">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4.2-2 1.3a11 11 0 0 0 6.3 6.3l1.3-2 4.2 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+<a class="skip" href="#main">К содержимому</a>
+
+<header class="header header--light" id="top-header">
+  <div class="wrap header__in">
+    <a class="logo" href="index.html" aria-label="Кунак — на главную">КУНАК</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="menu.html" aria-current="page">Меню</a>
+      <a href="index.html#about">О кафе</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn--call" href="#call" data-call>Позвонить в кафе</a>
+    <div class="header__tools">
+      <a class="icon-btn" href="#call" data-call aria-label="Позвонить в кафе"><svg class="ic"><use href="#i-phone"/></svg></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Открыть меню навигации"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="panel on-dark" id="nav-panel" role="dialog" aria-modal="true" aria-label="Навигация" hidden>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="index.html#about">О кафе</a></li>
+    <li><a href="menu.html">Меню</a></li>
+    <li><a href="index.html#contacts">Контакты</a></li>
+  </ul>
+  <a class="btn" href="#call" data-call>Позвонить в кафе</a>
+  <span class="panel__phone">+7 (000) 000-00-00</span>
+</div>
+
+<div class="panel panel--cats on-dark" id="cats-panel" role="dialog" aria-modal="true" aria-label="Категории меню" hidden>
+  <ul>
+    <li><a href="#menu-top">Все категории</a></li>
+    <li><a href="#breakfast">Завтраки</a></li>
+    <li><a href="#salads">Салаты и закуски</a></li>
+    <li><a href="#soups">Супы</a></li>
+    <li><a href="#national">Национальные блюда</a></li>
+    <li><a href="#hot">Горячее</a></li>
+    <li><a href="#drinks">Напитки</a></li>
+  </ul>
+  <p class="panel__note">Названия и цены — для примера</p>
+</div>
+
+<main id="main">
+  <div class="wrap mhead" id="menu-top">
+    <h1>Выбирайте по настроению.</h1>
+    <p>45 позиций: национальная кухня, завтраки и кофе. Названия и цены — для примера.</p>
+  </div>
+
+  <div class="cats">
+    <div class="wrap">
+      <button class="cats__btn" type="button" aria-expanded="false" aria-controls="cats-panel"><span class="cats__label">Все категории</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      <nav class="cats__bar" aria-label="Категории меню">
+        <a href="#breakfast">Завтраки</a>
+        <a href="#salads">Салаты и закуски</a>
+        <a href="#soups">Супы</a>
+        <a href="#national">Национальные блюда</a>
+        <a href="#hot">Горячее</a>
+        <a href="#drinks">Напитки</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap mlist">
+   <div class="mcol">
+    <section class="mcat" id="breakfast" aria-labelledby="h-breakfast">
+      <h2 id="h-breakfast">Завтраки</h2>
+      <ul>
+        <li><span class="n">Шакшука с тандырной лепёшкой</span><span class="p">480 ₽</span></li>
+        <li><span class="n">Овсяная каша с финиками, орехами и мороженым</span><span class="p">485 ₽</span></li>
+        <li><span class="n">Абрикосовая каша с миндальным урбечем</span><span class="p">435 ₽</span></li>
+        <li><span class="n">Сырники с абрикосовым вареньем и сметаной</span><span class="p">465 ₽</span></li>
+        <li><span class="n">Завтрак «Кунак»</span><span class="p">670 ₽</span></li>
+        <li><span class="n">Каспийский завтрак</span><span class="p">670 ₽</span></li>
+      </ul>
+    </section>
+    <section class="mcat" id="salads" aria-labelledby="h-salads">
+      <h2 id="h-salads">Салаты и закуски</h2>
+      <ul>
+        <li><span class="n">Чобан салат с молодым сыром</span><span class="p">535 ₽</span></li>
+        <li><span class="n">Салат с говядиной и печёным перцем</span><span class="p">635 ₽</span></li>
+      </ul>
+    </section>
+    <section class="mcat" id="soups" aria-labelledby="h-soups">
+      <h2 id="h-soups">Супы</h2>
+      <ul>
+        <li><span class="n">Куриный суп</span><span class="p">375 ₽</span></li>
+        <li><span class="n">Тыквенный крем-суп с креветками</span><span class="p">485 ₽</span></li>
+      </ul>
+    </section>
+    <section class="mcat mcat--lead" id="national" aria-labelledby="h-national">
+      <picture class="mcat__img"><source type="image/avif" srcset="img/kurze-800.avif"><img src="img/kurze-800.jpg" width="800" height="400" loading="lazy" decoding="async" alt="Курзе — концептуальное изображение" style="object-position:50% 55%"></picture>
+      <h2 id="h-national">Национальные блюда Дагестана</h2>
+      <ul>
+        <li><span class="n">Аварский хинкал</span><span class="p">650 ₽</span></li>
+        <li><span class="n">Тонкий хинкал</span><span class="p">650 ₽</span></li>
+        <li><span class="n">Курзе с мясом</span><span class="p">550 ₽</span></li>
+        <li><span class="n">Курзе с картофелем</span><span class="p">420 ₽</span></li>
+        <li><span class="n">Чуду с говядиной</span><span class="p">450 ₽</span></li>
+        <li><span class="n">Чуду с курицей</span><span class="p">410 ₽</span></li>
+        <li><span class="n">Чуду с зеленью</span><span class="p">375 ₽</span></li>
+        <li><span class="n">Чуду с картофелем</span><span class="p">375 ₽</span></li>
+        <li><span class="n">Чуду с сыром и томатами</span><span class="p">410 ₽</span></li>
+        <li><span class="n">Чуду с тыквой</span><span class="p">375 ₽</span></li>
+      </ul>
+    </section>
+   </div>
+   <div class="mcol">
+    <section class="mcat" id="hot" aria-labelledby="h-hot">
+      <h2 id="h-hot">Горячее</h2>
+      <ul>
+        <li><span class="n">Домашняя паста с креветками</span><span class="p">625 ₽</span></li>
+        <li><span class="n">Домашняя лапша с копчёным сулугуни и курицей</span><span class="p">560 ₽</span></li>
+        <li><span class="n">Куриная грудка в сливочном соусе с печёным картофелем</span><span class="p">620 ₽</span></li>
+      </ul>
+    </section>
+    <section class="mcat mcat--lead" id="drinks" aria-labelledby="h-drinks">
+      <picture class="mcat__img"><source type="image/avif" srcset="img/coffee-800.avif"><img src="img/coffee-800.jpg" width="800" height="400" loading="lazy" decoding="async" alt="Кофе — концептуальное изображение" style="object-position:60% 50%"></picture>
+      <h2 id="h-drinks">Напитки</h2>
+      <ul>
+        <li><span class="n">Двойной эспрессо</span><span class="p">225 ₽</span></li>
+        <li><span class="n">Американо</span><span class="p">225 ₽</span></li>
+        <li><span class="n">Флэт уайт</span><span class="p">285 ₽</span></li>
+        <li><span class="n">Капучино</span><span class="p">275 ₽</span></li>
+        <li><span class="n">Латте</span><span class="p">275 ₽</span></li>
+        <li><span class="n">Раф Урбеч</span><span class="p">395 ₽</span></li>
+        <li><span class="n">Раф Ванильный</span><span class="p">395 ₽</span></li>
+        <li><span class="n">Сырный раф</span><span class="p">395 ₽</span></li>
+        <li><span class="n">Какао</span><span class="p">310 ₽</span></li>
+        <li><span class="n">Какао урбеч</span><span class="p">370 ₽</span></li>
+        <li><span class="n">Матча</span><span class="p">330 ₽</span></li>
+        <li><span class="n">Бамбл</span><span class="p">390 ₽</span></li>
+        <li><span class="n">Абрикосовый бамбл</span><span class="p">395 ₽</span></li>
+        <li><span class="n">Эспрессо-тоник</span><span class="p">350 ₽</span></li>
+        <li><span class="n">Молочный коктейль урбеч</span><span class="p">405 ₽</span></li>
+        <li><span class="n">Молочный коктейль</span><span class="p">405 ₽</span></li>
+        <li><span class="n">Лимонад облепиха-абрикос</span><span class="p">350 ₽</span></li>
+        <li><span class="n">Лимонад киви-лайм</span><span class="p">350 ₽</span></li>
+        <li><span class="n">Айсти гранат-улун</span><span class="p">350 ₽</span></li>
+        <li><span class="n">Чай</span><span class="p">355 ₽</span></li>
+        <li><span class="n">Авторский чай</span><span class="p">435 ₽</span></li>
+        <li><span class="n">Фреш</span><span class="p">415 ₽</span></li>
+      </ul>
+    </section>
+   </div>
+  </div>
+
+  <div class="wrap">
+    <div class="mcta">
+      <div>
+        <h2>Захотелось за стол?</h2>
+        <p>Позвоните — кафе подтвердит наличие блюд и столика.</p>
+      </div>
+      <a class="btn" href="#call" data-call>Позвонить в кафе</a>
+    </div>
+  </div>
+</main>
+
+<div class="callbar" aria-hidden="true">
+  <a class="btn" href="#call" data-call tabindex="-1"><svg class="ic"><use href="#i-phone"/></svg> Позвонить в кафе</a>
+</div>
+
+<footer class="footer on-dark edge">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">КУНАК</a>
+        <p class="footer__tag">Пример сайта для ресторана</p>
+      </div>
+      <nav aria-label="Навигация в подвале">
+        <ul>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="index.html#about">О кафе</a></li>
+          <li><a href="index.html#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div><span class="phone">+7 (000) 000-00-00</span></div>
+    </div>
+    <div class="footer__legal">
+      <strong>Пример сайта для ресторана. Кафе «Кунак» вымышленное</strong>
+      <span>Фотографии — концептуальные изображения, не съёмка кафе.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="call" id="call-dialog" aria-labelledby="call-h">
+  <div class="call__in">
+    <button class="call__x" type="button" data-close aria-label="Закрыть"><svg class="ic"><use href="#i-close"/></svg></button>
+    <h2 id="call-h">Здесь будет звонок.</h2>
+    <p>Это пример сайта. На сайте вашего ресторана кнопка «Позвонить» сразу набирает ваш номер — гостю не нужно его искать и переписывать.</p>
+    <button class="btn" type="button" data-close>Понятно</button>
+    <p class="call__note">Бронь, меню, адрес и фото — под ваше заведение.</p>
+  </div>
+</dialog>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
