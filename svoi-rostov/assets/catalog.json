@@ -1,0 +1,255 @@
+{
+  "currency": "RUB",
+  "businessConfirmed": false,
+  "source": "Предоставленный Сергеем бриф от 19.11.2026",
+  "categories": [
+    {
+      "id": "hair",
+      "title": "Волосы",
+      "description": "Стрижки, окрашивание и восстановление",
+      "photo": "assets/photos/hair.webp",
+      "services": [
+        {
+          "id": "hair-1",
+          "title": "Женская стрижка",
+          "price": {
+            "kind": "from",
+            "rub": 900
+          }
+        },
+        {
+          "id": "hair-2",
+          "title": "Мужская стрижка",
+          "price": {
+            "kind": "from",
+            "rub": 700
+          }
+        },
+        {
+          "id": "hair-3",
+          "title": "Сложное окрашивание",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-4",
+          "title": "Холодное восстановление",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-5",
+          "title": "Детская стрижка",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-6",
+          "title": "Стрижка бороды",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-7",
+          "title": "Кератиновое выпрямление",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-8",
+          "title": "Ботокс волос",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-9",
+          "title": "Реконструкция волос",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-10",
+          "title": "Полировка волос",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-11",
+          "title": "Химическая завивка",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-12",
+          "title": "Свадебная причёска",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "hair-13",
+          "title": "Вечерняя причёска",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "nails",
+      "title": "Ногти",
+      "description": "Маникюр, педикюр и покрытие",
+      "photo": "assets/photos/nails.webp",
+      "services": [
+        {
+          "id": "nails-1",
+          "title": "Аппаратный маникюр",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-2",
+          "title": "Маникюр с покрытием гель-лаком",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-3",
+          "title": "Женский педикюр",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-4",
+          "title": "Наращивание гелем",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-5",
+          "title": "Мужской маникюр",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-6",
+          "title": "Детский маникюр",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "nails-7",
+          "title": "Мужской педикюр",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "brows",
+      "title": "Брови",
+      "description": "Коррекция, окрашивание и ламинирование",
+      "photo": "assets/photos/brows.webp",
+      "services": [
+        {
+          "id": "brows-1",
+          "title": "Коррекция бровей",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "brows-2",
+          "title": "Окрашивание бровей",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "brows-3",
+          "title": "Ламинирование бровей",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "laser",
+      "title": "Лазер и уход",
+      "description": "Лазерная эпиляция и аппаратные процедуры",
+      "photo": "assets/photos/laser.webp",
+      "services": [
+        {
+          "id": "laser-1",
+          "title": "Лазерная эпиляция",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "laser-2",
+          "title": "Аппаратная косметология",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "laser-3",
+          "title": "Аппаратный массаж",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        },
+        {
+          "id": "laser-4",
+          "title": "SPA для головы",
+          "price": {
+            "kind": "quote",
+            "rub": null
+          }
+        }
+      ]
+    }
+  ]
+}

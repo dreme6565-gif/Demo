@@ -1,0 +1,42 @@
+{
+  "progress": "Reversible, local to each seam. Points are normalized to named transition bounds; x grows right, y grows down, z grows toward camera. All fields use one measured viewport.",
+  "orbit": {"arcDegrees": 112, "maxTiltDegrees": 26, "nearScale": 1.12, "farScale": 0.88, "cameraZ": 3.6, "fovDegrees": 42},
+  "timing": {"approach": [0.05, 0.30], "middle": [0.26, 0.70], "depart": [0.69, 1.00], "headlineReveal": [0.16, 0.68], "photoReveal": [0.22, 0.61]},
+  "seams": {
+    "A": {
+      "between": ["hero", "catalogue-heading"],
+      "lead": "sakura",
+      "companion": "orchid",
+      "desktop": [[0.58,0.12,-0.22],[0.52,0.30,0.26],[0.89,0.46,0.18],[0.76,0.78,-0.16]],
+      "mobile": [[0.82,0.12,-0.20],[0.92,0.37,0.12],[0.57,0.55,0.22],[0.79,0.72,-0.13]]
+    },
+    "B": {
+      "between": ["last-catalog-card", "estimate-top"],
+      "lead": "sakura",
+      "companion": "orchid",
+      "desktop": [[0.92,0.09,-0.21],[0.63,0.22,0.27],[0.56,0.76,0.20],[0.92,0.87,-0.15]],
+      "mobile": [[0.90,0.09,-0.20],[0.79,0.22,0.13],[0.67,0.68,0.19],[0.95,0.71,-0.13]]
+    },
+    "C": {
+      "between": ["estimate-end", "team-image"],
+      "lead": "sakura-side",
+      "companion": "petal",
+      "desktop": [[0.96,0.15,-0.26],[0.73,0.12,0.26],[0.41,0.57,0.17],[0.57,0.73,-0.19]],
+      "mobile": [[0.86,0.10,-0.20],[0.74,0.29,0.13],[0.96,0.55,0.18],[0.81,0.70,-0.11]]
+    },
+    "D": {
+      "between": ["team-outro", "faq"],
+      "lead": "petal",
+      "companion": "sakura-side",
+      "desktop": [[0.89,0.08,-0.26],[0.82,0.18,0.15],[0.37,0.53,0.22],[0.36,0.79,-0.12]],
+      "mobile": [[0.87,0.07,-0.24],[0.91,0.27,0.14],[0.96,0.55,0.13],[0.87,0.82,-0.11]]
+    },
+    "E": {
+      "between": ["faq-last", "contact"],
+      "lead": "sakura",
+      "companion": "orchid",
+      "desktop": [[0.63,0.09,-0.20],[0.57,0.31,0.19],[0.91,0.56,0.26],[0.80,0.69,-0.18]],
+      "mobile": [[0.72,0.06,-0.23],[0.76,0.31,0.14],[0.98,0.43,0.19],[0.87,0.55,-0.11]]
+    }
+  }
+}

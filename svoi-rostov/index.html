@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Свои — студия красоты в Ростове-на-Дону</title>
+<meta name="description" content="Студия красоты «Свои» на ул. Ларина, 11 в Ростове-на-Дону: волосы, ногти, брови, лазерная эпиляция и аппаратный уход. Соберите список услуг и отправьте администратору.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5F0E7">
+<link rel="preload" as="image" href="assets/photos/hero.webp" media="(min-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/photos/hero-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" href="fonts/cormorant-garamond-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cormorant-garamond-cyrillic-600-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css?v=35">
+<link rel="stylesheet" href="css/style.css?v=35">
+<script>
+  (function () {
+    var d = document.documentElement, q = location.search;
+    d.classList.add('js');
+    var rm = /[?&]rm=1/.test(q) || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if (rm) d.classList.add('rm');
+    if (/[?&]no3d=1/.test(q)) d.classList.add('no3d');
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="logo" href="#top" aria-label="Свои — студия красоты, наверх"><span class="logo__mark">свои</span><span class="logo__sub">Студия красоты</span></a>
+    <nav class="topnav" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#estimate">Рассчитать</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <button class="obtn topbar__cta" type="button" data-book><span class="topbar__cta-l">Записаться</span><span class="topbar__cta-s">Запись</span> <i class="arr" aria-hidden="true"></i></button>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-haspopup="dialog" data-menu-open><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- Первый экран: портрет и лепесток -->
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="hero__photo" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 767px)" srcset="assets/photos/hero-mobile.webp" width="740" height="870">
+        <img src="assets/photos/hero.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <img class="flw" data-flw="hero-sakura" data-rz="-8" style="--rz:-8deg" src="assets/flowers/sakura.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw" data-flw="hero-orchid" data-rz="14" style="--rz:14deg" src="assets/flowers/orchid.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw flw--d" data-flw="hero-petal" data-rz="-24" style="--rz:-24deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    <div class="wrap hero__in">
+      <p class="eyebrow eyebrow--muted">Студия красоты <span aria-hidden="true">/</span> Ростов-на-Дону</p>
+      <h1 id="h1" class="h1"><span class="ln">Красота</span> <em class="ln">в&nbsp;своём ритме.</em></h1>
+      <p class="hero__lead">Волосы, ногти, брови, лазер и&nbsp;уход.<br>Ростов-на-Дону, Ларина, 11.</p>
+      <div class="hero__ctas">
+        <a class="fbtn" href="#services">Выбрать услуги <i class="arr" aria-hidden="true"></i></a>
+        <button class="tlink" type="button" data-book>Записаться <i class="arr" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="wrap hero__foot">
+      <a class="hero__down" href="#services">К услугам <span aria-hidden="true">↓</span></a>
+    </div>
+    <nav class="dirs" aria-label="Направления">
+      <div class="wrap dirs__in">
+        <button type="button" data-cat-open="hair">Волосы <i class="arr" aria-hidden="true"></i></button>
+        <button type="button" data-cat-open="nails">Ногти <i class="arr" aria-hidden="true"></i></button>
+        <button type="button" data-cat-open="brows">Брови <i class="arr" aria-hidden="true"></i></button>
+        <button type="button" data-cat-open="laser">Лазер и&nbsp;уход <i class="arr" aria-hidden="true"></i></button>
+        <a class="dirs__rating" href="#reviews">5,0 в 2ГИС <i class="arr" aria-hidden="true"></i></a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Сцена A → каталог -->
+  <section class="services" id="services" aria-labelledby="services-h">
+    <div class="wrap services__head">
+      <div class="services__text">
+        <p class="eyebrow eyebrow--muted">Услуги</p>
+        <h2 id="services-h" class="h2 draw" data-draw="a"><span class="ln">Выберите</span> <em class="ln">свой уход.</em></h2>
+        <p class="services__lead">Откройте направление, чтобы посмотреть услуги и&nbsp;добавить их&nbsp;в&nbsp;расчёт.</p>
+      </div>
+      <img class="flw" data-flw="a-sakura" data-rz="10" style="--rz:10deg" src="assets/flowers/sakura.webp" alt="" aria-hidden="true" decoding="async">
+      <img class="flw" data-flw="a-orchid" data-rz="-12" style="--rz:-12deg" src="assets/flowers/orchid.webp" alt="" aria-hidden="true" decoding="async">
+      <img class="flw flw--d" data-flw="a-petal" data-rz="18" style="--rz:18deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    </div>
+    <div class="wrap">
+      <div class="cards" data-cards></div>
+    </div>
+    <i class="flw flw--ghost" data-flw="b0-sakura" data-rz="-20" aria-hidden="true"></i>
+    <i class="flw flw--ghost" data-flw="b0-orchid" data-rz="16" aria-hidden="true"></i>
+  </section>
+
+  <!-- Сцена B: каталог → «Соберите свой визит.» → расчёт (общий фон с началом расчёта) -->
+  <section class="scene-b" aria-labelledby="visit-h">
+    <div class="b-photo" aria-hidden="true"><picture><source media="(max-width: 767px)" srcset="assets/photos/nails-mobile.webp"><img src="assets/photos/nails.webp" alt="" loading="lazy" decoding="async" width="1536" height="1024"></picture></div>
+    <img class="flw" data-flw="b-sakura" data-rz="-6" style="--rz:-6deg" src="assets/flowers/sakura.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw" data-flw="b-orchid" data-rz="12" style="--rz:12deg" src="assets/flowers/orchid.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw" data-flw="b-petal" data-rz="-18" style="--rz:-18deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    <div class="wrap scene-b__in">
+      <p class="eyebrow eyebrow--muted">Расчёт визита</p>
+      <h2 id="visit-h" class="h2 h2--visit draw" data-draw="b"><span class="ln">Соберите</span> <em class="ln">свой визит.</em></h2>
+    </div>
+  </section>
+
+  <div class="paper">
+  <!-- Расчёт -->
+  <section class="estimate" id="estimate" aria-labelledby="estimate-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Услуги и цены</p>
+          <h2 id="estimate-h" class="h2" tabindex="-1">Что планируем?</h2>
+        </div>
+        <p class="sec-head__lead">Отметьте услуги. Точную стоимость и&nbsp;время уточнит администратор.</p>
+      </div>
+      <div class="calc">
+        <div class="calc__pick">
+          <div class="tabs" role="tablist" aria-label="Направления" data-tabs></div>
+          <div class="calc__panel" role="tabpanel" data-panel></div>
+        </div>
+        <aside class="visit" aria-labelledby="visit-title" data-visit>
+          <h3 id="visit-title" class="visit__title">Ваш визит</h3>
+          <ul class="visit__list" data-visit-list></ul>
+          <p class="visit__empty" data-visit-empty>Отметьте услуги слева — здесь появится список и&nbsp;ориентир по&nbsp;цене.</p>
+          <div class="visit__sum" aria-live="polite" aria-atomic="true">
+            <p class="visit__total" data-visit-total></p>
+            <p class="visit__note" data-visit-note></p>
+          </div>
+          <button class="btn btn--light btn--block" type="button" data-send disabled>Отправить список <i class="arr" aria-hidden="true"></i></button>
+          <p class="visit__alt">
+            <button type="button" class="linkbtn" data-copy-list disabled>Скопировать список</button>
+            <span aria-hidden="true">·</span>
+            <a href="tel:+79094358555">+7 909 435-85-55</a>
+          </p>
+          <p class="visit__status" role="status" aria-live="polite" data-copy-status></p>
+        </aside>
+      </div>
+    </div>
+    <i class="flw flw--ghost" data-flw="c0" data-rz="-10" aria-hidden="true"></i>
+  </section>
+
+  <!-- Команда -->
+  <section class="team" id="team" aria-labelledby="team-h">
+    <img class="flw" data-flw="c-sakura" data-rz="8" style="--rz:8deg" src="assets/flowers/sakura.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw flw--d" data-flw="c-orchid" data-rz="-16" style="--rz:-16deg" src="assets/flowers/orchid.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw" data-flw="c-petal" data-rz="22" style="--rz:22deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    <i class="flw flw--ghost" data-flw="d0" data-rz="-14" aria-hidden="true"></i>
+    <div class="wrap team__in">
+      <div class="team__text">
+        <p class="eyebrow eyebrow--muted">Команда и обучение</p>
+        <h2 id="team-h" class="h2 h2--stagger"><span class="ln">У&nbsp;каждого</span> <em class="ln">своё дело.</em></h2>
+        <p class="team__lead">Поможем выбрать мастера и&nbsp;время для волос, ногтей, бровей или ухода.</p>
+        <hr>
+        <h3 class="h3">Обучение маникюру</h3>
+        <button class="tlink" type="button" data-book="training">Узнать условия <i class="arr" aria-hidden="true"></i></button>
+      </div>
+      <div class="team__media">
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/photos/team-mobile.webp" width="800" height="533">
+          <img src="assets/photos/team.webp" alt="Ножницы, кисть, лист шалфея и лепесток на светлом камне" loading="lazy" decoding="async" width="1536" height="1024">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-h">
+    <img class="flw" data-flw="d-petal" data-rz="-12" style="--rz:-12deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    <div class="wrap reviews__in">
+      <div class="reviews__score">
+        <h2 id="reviews-h" class="eyebrow">Отзывы в 2ГИС</h2>
+        <p class="reviews__num"><span class="visually-hidden">Оценка </span>5,0</p>
+      </div>
+      <div class="reviews__text">
+        <p class="reviews__count">33 оценки <span aria-hidden="true">/</span> 31 отзыв</p>
+        <p>Гости пишут об&nbsp;уюте, внимательности мастеров и&nbsp;разных услугах в&nbsp;одной студии.</p>
+        <p class="reviews__src">По данным 2ГИС на 19.11.2026</p>
+      </div>
+      <a class="btn btn--paper reviews__btn" href="https://2gis.ru/rostov-on-don/firm/70000001118345647" target="_blank" rel="noopener">Посмотреть отзывы <i class="arr" aria-hidden="true"></i><span class="visually-hidden"> (откроется 2ГИС)</span></a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <img class="flw" data-flw="d-side" data-rz="-10" style="--rz:-10deg" src="assets/flowers/sakura-side.webp" alt="" aria-hidden="true" decoding="async">
+    <i class="flw flw--ghost" data-flw="e0" data-rz="-12" aria-hidden="true"></i>
+    <div class="wrap faq__in">
+      <div>
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-h" class="h2"><span class="ln">Перед</span> <em class="ln">визитом.</em></h2>
+      </div>
+      <div class="faq__list" data-faq></div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Сцена C → контакты -->
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="contact__run" aria-hidden="true"></div>
+    <img class="flw" data-flw="e-sakura" data-rz="6" style="--rz:6deg" src="assets/flowers/sakura.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw" data-flw="e-orchid" data-rz="-14" style="--rz:-14deg" src="assets/flowers/orchid.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw flw--d" data-flw="e-side" data-rz="12" style="--rz:12deg" src="assets/flowers/sakura-side.webp" alt="" aria-hidden="true" decoding="async">
+    <img class="flw flw--d" data-flw="e-petal" data-rz="-20" style="--rz:-20deg" src="assets/flowers/petal.webp" alt="" aria-hidden="true" decoding="async">
+    <div class="wrap contact__in">
+      <div class="contact__text">
+        <p class="eyebrow eyebrow--dark">Контакты</p>
+        <h2 id="contact-h" class="h2 h2--light h2--stagger"><span class="ln">Увидимся</span> <em class="ln">у&nbsp;своих.</em></h2>
+        <address class="contact__addr">
+          <strong>Ростов-на-Дону, ул.&nbsp;Ларина, 11</strong>
+          <a href="tel:+79094358555">+7 909 435-85-55</a>
+        </address>
+        <div class="contact__btns">
+          <a class="fbtn" href="https://t.me/+79094358555" target="_blank" rel="noopener">Telegram <i class="arr" aria-hidden="true"></i></a>
+          <a class="obtn obtn--lg" href="https://wa.me/79094358555" target="_blank" rel="noopener">WhatsApp <i class="arr" aria-hidden="true"></i></a>
+          <a class="obtn obtn--lg" href="https://2gis.ru/rostov-on-don/firm/70000001118345647" target="_blank" rel="noopener">Маршрут в 2ГИС <i class="arr" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <a class="landmark" href="https://2gis.ru/rostov-on-don/firm/70000001118345647" target="_blank" rel="noopener">
+        <span class="landmark__eyebrow">Ориентир</span>
+        <span class="landmark__title">Рядом с РГУПС</span>
+        <svg class="landmark__map" viewBox="0 0 296 90" aria-hidden="true" focusable="false">
+          <path d="M8 84 L290 30" stroke="#C8D0BE" stroke-width="12" fill="none"/>
+          <path d="M84 88 L136 6" stroke="#C8D0BE" stroke-width="10" fill="none"/>
+          <circle cx="198" cy="58" r="8" fill="#40533D"/>
+        </svg>
+        <span class="landmark__pin">Ларина, 11</span>
+        <i class="arr landmark__arr" aria-hidden="true"></i>
+        <span class="visually-hidden">Ориентир: рядом с РГУПС. Открыть карточку в 2ГИС</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span class="logo__mark">свои</span>
+    <span class="footer__sub">Студия красоты, Ростов-на-Дону</span>
+    <a href="#top" class="footer__up">Наверх <span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
+
+<!-- Нижняя панель (mobile) -->
+<div class="selbar is-off" data-selbar hidden>
+  <div class="selbar__txt">
+    <strong>Ваш визит</strong>
+    <span data-selbar-sum></span>
+  </div>
+  <a class="btn btn--wine btn--sm" href="#estimate" data-to-estimate>К расчёту <i class="arr" aria-hidden="true"></i></a>
+</div>
+
+<!-- Каталог -->
+<dialog class="dlg dlg--sheet" id="catalog" aria-labelledby="cat-title">
+  <div class="dlg__body">
+    <div class="dlg__head">
+      <div>
+        <p class="eyebrow">Каталог услуг</p>
+        <h2 class="dlg__title" id="cat-title"></h2>
+      </div>
+      <button class="xbtn" type="button" data-close aria-label="Закрыть каталог"></button>
+    </div>
+    <p class="dlg__lead" data-cat-desc></p>
+    <div class="dlg__scroll" data-cat-list></div>
+  </div>
+  <div class="dlg__foot">
+    <button class="btn btn--wine btn--block" type="button" data-cat-go>К расчёту <i class="arr" aria-hidden="true"></i></button>
+  </div>
+</dialog>
+
+<!-- Запись -->
+<dialog class="dlg dlg--sheet" id="booking" aria-labelledby="book-title">
+  <div class="dlg__body">
+    <div class="dlg__head">
+      <div>
+        <p class="eyebrow">Связь</p>
+        <h2 class="dlg__title" id="book-title">Запись в студию</h2>
+      </div>
+      <button class="xbtn" type="button" data-close aria-label="Закрыть"></button>
+    </div>
+    <p class="dlg__lead" data-book-lead>Выберите, где вам удобно общаться.<br>Время визита подтвердит администратор.</p>
+    <div class="draft" data-draft tabindex="0" aria-label="Текст сообщения"></div>
+  </div>
+  <div class="dlg__foot">
+    <div class="dlg__chats" data-chats>
+      <a class="btn btn--wine" data-chat-tg target="_blank" rel="noopener" href="https://t.me/+79094358555">Telegram <i class="arr" aria-hidden="true"></i></a>
+      <a class="btn btn--paper" data-chat-wa target="_blank" rel="noopener" href="https://wa.me/79094358555">WhatsApp <i class="arr" aria-hidden="true"></i></a>
+    </div>
+    <button class="btn btn--paper btn--block btn--center" type="button" data-copy>Скопировать список</button>
+    <p class="copy-status" role="status" aria-live="polite" data-book-status></p>
+    <a class="dlg__call" href="tel:+79094358555">Позвонить +7 909 435-85-55</a>
+  </div>
+</dialog>
+
+<!-- Меню (mobile) -->
+<dialog class="menu" id="menu" aria-label="Меню">
+  <div class="menu__top">
+    <span class="logo__mark">свои</span>
+    <button class="xbtn xbtn--dark" type="button" data-close aria-label="Закрыть меню"></button>
+  </div>
+  <nav class="menu__nav" aria-label="Разделы">
+    <a href="#services">Услуги <i class="arr" aria-hidden="true"></i></a>
+    <a href="#estimate">Рассчитать визит <i class="arr" aria-hidden="true"></i></a>
+    <a href="#reviews">Отзывы <i class="arr" aria-hidden="true"></i></a>
+    <a href="#contact">Контакты <i class="arr" aria-hidden="true"></i></a>
+  </nav>
+  <button class="btn btn--light btn--block" type="button" data-book>Записаться <i class="arr" aria-hidden="true"></i></button>
+  <p class="menu__addr">Ростов-на-Дону, ул. Ларина, 11</p>
+  <a class="menu__tel" href="tel:+79094358555">+7 909 435-85-55</a>
+</dialog>
+
+<script type="module" src="js/app.js?v=35"></script>
+</body>
+</html>
